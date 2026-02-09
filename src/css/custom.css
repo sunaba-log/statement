@@ -55,3 +55,9 @@ h5,
 h6 {
   font-family: "DotGothic16", sans-serif;
 }
+h1 {
+  color: var(--ifm-color-primary-darkest);
+}
+h2 {
+  color: var(--ifm-color-primary-light);
+}

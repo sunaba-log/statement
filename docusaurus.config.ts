@@ -87,7 +87,7 @@ const config: Config = {
           position: "left",
           label: "宣言",
         },
-        // { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/sunaba-log",
           label: "GitHub",
