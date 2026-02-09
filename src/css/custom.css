@@ -1,0 +1,57 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ffbb5c;
+  --ifm-color-primary-dark: #ffad39;
+  --ifm-color-primary-darker: #ffa528;
+  --ifm-color-primary-darkest: #f38e00;
+  --ifm-color-primary-light: #ffc97f;
+  --ifm-color-primary-lighter: #ffd190;
+  --ifm-color-primary-lightest: #ffe6c4;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #ffbb5c;
+  --ifm-color-primary-dark: #ffad39;
+  --ifm-color-primary-darker: #ffa528;
+  --ifm-color-primary-darkest: #f38e00;
+  --ifm-color-primary-light: #ffc97f;
+  --ifm-color-primary-lighter: #ffd190;
+  --ifm-color-primary-lightest: #ffe6c4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+  font-family: "DotGothic16", sans-serif;
+  src: url("/font/DotGothic16/DotGothic16-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "DotGothic16", sans-serif;
+}
+
+body {
+  font-family: "DotGothic16", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DotGothic16", sans-serif;
+}
