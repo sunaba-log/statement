@@ -17,3 +17,8 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+sdd:
+  label: SDD
+  permalink: /sdd
+  description: SDD tag description
