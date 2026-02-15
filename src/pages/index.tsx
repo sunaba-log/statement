@@ -6,7 +6,8 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import PodcastLatestWidget from "@site/src/components/PodcastLatestWidget";
-
+import GithubIcon from "@site/src/components/GithubIcon";
+import IconButton from "@site/src/components/IconButton";
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -20,6 +21,8 @@ function HomepageHeader() {
         <div className={styles.heroText}>
           <Heading as="h1" className="hero__title">
             {siteConfig.title}
+            <br />
+            :sunabalog
           </Heading>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
@@ -29,6 +32,13 @@ function HomepageHeader() {
             >
               宣言を読む
             </Link>
+            <IconButton
+              icon={<GithubIcon width={20} height={20} />}
+              label="GitHub"
+              href="https://github.com/sunaba-log"
+              target="_blank"
+              rel="noreferrer"
+            />
           </div>
         </div>
         <PodcastLatestWidget
