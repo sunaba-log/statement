@@ -65,6 +65,16 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  /**
+   * Docusaurus guards `docusaurus.config.js` from unknown fields. To add a
+   * custom field, define it on `customFields`.
+   *
+   * @see https://docusaurus.io/docs/api/docusaurus-config#customFields
+   * @default {}
+   */
+  customFields: {
+    podcastFeedUrl: "https://podcast.sunabalog.com/sunabalog/feed.xml",
+  },
 
   themeConfig: {
     // Replace with your project's social card

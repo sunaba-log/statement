@@ -10,9 +10,28 @@
   overflow: hidden;
 }
 
+.heroContent {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.heroText {
+  max-width: 600px;
+}
+
+.podcastWidget {
+  width: min(520px, 100%);
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+
+  .heroContent {
+    gap: 1.5rem;
   }
 }
 
