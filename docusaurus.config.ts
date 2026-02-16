@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "砂場録宣言'26",
-  tagline: "sunabalog statement '26",
+  title: "砂場録",
+  tagline: "「妄想」から「現実」へ",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -65,10 +65,20 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  /**
+   * Docusaurus guards `docusaurus.config.js` from unknown fields. To add a
+   * custom field, define it on `customFields`.
+   *
+   * @see https://docusaurus.io/docs/api/docusaurus-config#customFields
+   * @default {}
+   */
+  customFields: {
+    podcastFeedUrl: "https://podcast.sunabalog.com/sunabalog/feed.xml",
+  },
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/sand-brain.png",
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -85,7 +95,7 @@ const config: Config = {
           position: "left",
           label: "宣言",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "記録", position: "left" },
         {
           href: "https://github.com/sunaba-log",
           label: "GitHub",
@@ -94,7 +104,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
+      style: "light",
       links: [
         {
           title: "Docs",
@@ -109,7 +119,7 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
+              label: "記録",
               to: "/blog",
             },
             {

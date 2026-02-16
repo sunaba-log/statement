@@ -1,0 +1,25 @@
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  background-color: transparent !important;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 996px) {
+  .content {
+    gap: 0.375rem;
+  }
+}

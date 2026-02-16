@@ -10,14 +10,40 @@
   overflow: hidden;
 }
 
+.heroContent {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.heroText {
+  max-width: 600px;
+  p {
+    font-size: 1rem;
+    color: var(--docusaurus-highlighted-code-line-bg);
+  }
+}
+
+.podcastWidget {
+  width: min(520px, 100%);
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
+
+  .heroContent {
+    gap: 1.5rem;
+  }
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Use flexbox for layout */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  justify-content: center; /* Center buttons within container */
+  padding: 10px;
 }

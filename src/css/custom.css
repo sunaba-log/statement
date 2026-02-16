@@ -8,27 +8,40 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #ffbb5c;
-  --ifm-color-primary-dark: #ffad39;
-  --ifm-color-primary-darker: #ffa528;
-  --ifm-color-primary-darkest: #f38e00;
-  --ifm-color-primary-light: #ffc97f;
-  --ifm-color-primary-lighter: #ffd190;
-  --ifm-color-primary-lightest: #ffe6c4;
+  --ifm-navbar-background-color: #f5f4f2;
+  /* --ifm-hero-background-color: #242424; */
+
+  --ifm-color-primary: #11b000;
+  --ifm-color-primary-dark: #0f9e00;
+  --ifm-color-primary-darker: #0e9600;
+  --ifm-color-primary-darkest: #0c7b00;
+  --ifm-color-primary-light: #13c200;
+  --ifm-color-primary-lighter: #14ca00;
+  --ifm-color-primary-lightest: #16e500;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: #15fd00;
+  --ifm-footer-background-color: #f5f4f2;
+
+  --ifm-color-secondary: #8cfd80;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #ffbb5c;
-  --ifm-color-primary-dark: #ffad39;
-  --ifm-color-primary-darker: #ffa528;
-  --ifm-color-primary-darkest: #f38e00;
-  --ifm-color-primary-light: #ffc97f;
-  --ifm-color-primary-lighter: #ffd190;
-  --ifm-color-primary-lightest: #ffe6c4;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-navbar-background-color: #181818;
+  --ifm-hero-background-color: #242424;
+  --ifm-color-primary: #15fd00;
+  --ifm-color-primary-dark: #13e400;
+  --ifm-color-primary-darker: #12d700;
+  --ifm-color-primary-darkest: #0fb100;
+  --ifm-color-primary-light: #2bff17;
+
+  --ifm-color-primary-lighter: rgb(224, 149, 53);
+  --ifm-color-primary-lightest: rgb(0, 223, 255);
+
+  --docusaurus-highlighted-code-line-bg: #15fd00;
+  --ifm-footer-background-color: #181818;
+
+  --ifm-color-secondary: var(--ifm-color-primary);
 }
 
 @font-face {
@@ -39,6 +52,7 @@
 }
 
 html {
+  font-size: 14px;
   scroll-behavior: smooth;
   font-family: "DotGothic16", sans-serif;
 }
@@ -56,8 +70,19 @@ h6 {
   font-family: "DotGothic16", sans-serif;
 }
 h1 {
-  color: var(--ifm-color-primary-lightest);
+  font-size: 2rem;
+  color: var(--ifm-color-primary);
 }
 h2 {
-  color: var(--ifm-color-primary-darkest);
+  font-size: 1.4rem;
+  color: var(--ifm-color-primary-lighter);
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+h5 {
+  font-size: 1rem;
 }
