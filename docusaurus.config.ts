@@ -119,7 +119,7 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
+              label: "記録",
               to: "/blog",
             },
             {
