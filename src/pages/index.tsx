@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import PodcastLatestWidget from "@site/src/components/PodcastLatestWidget";
 import GithubIcon from "@site/src/components/GithubIcon";
@@ -16,7 +15,7 @@ function HomepageHeader() {
     | string
     | undefined;
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx("hero", styles.heroBanner)}>
       <div className={clsx("container", styles.heroContent)}>
         <div className={styles.heroText}>
           <Heading as="h1" className="hero__title">
@@ -31,6 +30,12 @@ function HomepageHeader() {
               to="/docs/statement/intro"
             >
               宣言を読む
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/statement/intro"
+            >
+              記録を読む
             </Link>
             <IconButton
               icon={<GithubIcon width={20} height={20} />}
@@ -58,7 +63,7 @@ export default function Home(): ReactNode {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main>{/* <HomepageFeatures /> */}</main>
+      <main></main>
     </Layout>
   );
 }

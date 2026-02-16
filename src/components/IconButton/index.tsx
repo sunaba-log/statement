@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
+import { translate } from "@docusaurus/Translate";
 
 type IconButtonProps = {
   href?: string;
@@ -32,6 +33,10 @@ export default function IconButton({
     return (
       <Link
         className={`button button--secondary button--lg ${className || ""}`}
+        style={{
+          backgroundColor: "transparent",
+          color: "var(--ifm-color-primary)",
+        }}
         to={to}
       >
         <div className={styles.content}>{buttonContent}</div>
@@ -43,6 +48,11 @@ export default function IconButton({
     <a
       href={href}
       className={`button button--secondary button--lg ${className || ""}`}
+      style={{
+        backgroundColor: "transparent",
+        color: "var(--ifm-color-primary)",
+        borderColor: "var(--ifm-color-primary)",
+      }}
       target={target}
       rel={rel}
     >

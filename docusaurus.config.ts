@@ -78,7 +78,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/sand-brain.png",
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -95,7 +95,7 @@ const config: Config = {
           position: "left",
           label: "宣言",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "記録", position: "left" },
         {
           href: "https://github.com/sunaba-log",
           label: "GitHub",
@@ -104,7 +104,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
+      style: "light",
       links: [
         {
           title: "Docs",
