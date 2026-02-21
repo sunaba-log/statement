@@ -22,3 +22,13 @@ sdd:
   label: SDD
   permalink: /sdd
   description: SDD tag description
+
+mission:
+  label: Mission
+  permalink: /mission
+  description: Mission tag description
+
+policy:
+  label: Policy
+  permalink: /policy
+  description: Policy tag description

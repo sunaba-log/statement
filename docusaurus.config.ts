@@ -4,6 +4,18 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+/**
+ * Mermaid config
+ * @see {@link https://docusaurus.io/docs/next/markdown-features/diagrams | 公式Docs}
+ * @see {@link https://www.npmjs.com/package/@docusaurus/theme-mermaid | npm}
+ */
+const mermaidConfig = {
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+};
+
 const config: Config = {
   title: "砂場録",
   tagline: "「妄想」から「現実」へ",
@@ -136,6 +148,8 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  // Diagram support
+  ...mermaidConfig,
 };
 
 export default config;
