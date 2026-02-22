@@ -109,6 +109,12 @@ const config: Config = {
         },
         { to: "/blog", label: "記録", position: "left" },
         {
+          type: "docSidebar",
+          sidebarId: "membersSidebar",
+          position: "left",
+          label: "隊員",
+        },
+        {
           href: "https://github.com/sunaba-log",
           label: "GitHub",
           position: "right",
