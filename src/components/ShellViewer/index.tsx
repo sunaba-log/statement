@@ -43,7 +43,9 @@ const PART_LABELS: Record<BodyPartKey, string> = {
   "foot-right": "右足",
 };
 
-const DEFAULT_CONTENT: Record<BodyPartKey, BodyContentItem[]> = {
+export type ShellRecord = Record<BodyPartKey, BodyContentItem[]>;
+
+const DEFAULT_CONTENT: ShellRecord = {
   head: [
     {
       title: "思考の輪郭",
@@ -205,22 +207,14 @@ export default function ShellViewer({ content, heading }: ShellViewerProps) {
                 </h3>
               </div>
 
-              <svg
-                className={styles.dialogCloseIcon}
-                viewBox="0 0 15 15"
-                width="21"
-                height="21"
+              <button
+                className={styles.dialogCloseButton}
+                onClick={() => setActivePart(null)}
+                aria-label="Close"
+                type="button"
               >
-                <g stroke="var(--ifm-color-emphasis-600)" stroke-width="1.2">
-                  <path
-                    d="M.75.75l13.5 13.5M14.25.75L.75 14.25"
-                    role="button"
-                    onClick={() => setActivePart(null)}
-                    tabIndex={0}
-                    aria-label="閉じる"
-                  ></path>
-                </g>
-              </svg>
+                ✕
+              </button>
             </div>
 
             <div className={styles.dialogContentGrid}>

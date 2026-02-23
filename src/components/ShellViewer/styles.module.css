@@ -54,7 +54,7 @@
   font-size: 0.85rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-cybernetics-background-color);
-  color: var(--ifm-font-color-base);
+  color: white;
   transition:
     border-color 0.2s ease,
     color 0.2s ease,
@@ -64,7 +64,7 @@
 .legendButton:hover,
 .legendButton:focus-visible {
   border-color: var(--ifm-color-primary);
-  color: var(--ifm-color-emphasis-200);
+  color: white;
   background: var(--ifm-color-primary-lightest);
 }
 
@@ -109,16 +109,15 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ifm-color-emphasis-600);
+  color: white;
 }
 
 .dialogTitle {
   margin: 4px 0 0;
   font-size: 1.4rem;
-  color: var(--ifm-cybernetics-font-color);
-  text-shadow:
-    0 0 4px #fff,
-    0 0 12px #fff;
+  color: white;
+  text-shadow: 0 0 12px var(--ifm-color-primary) 0 0 16px
+    var(--ifm-color-primary);
 }
 
 .dialogCloseIcon {
@@ -134,6 +133,34 @@
   background: var(--ifm-color-primary-lightest);
 }
 
+.dialogCloseButton {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  position: absolute; /* 親を基準に配置 */
+  top: 10px; /* 上からの位置調整 */
+  right: 10px; /* 右からの位置調整 */
+}
+
+.dialogCloseButton:hover,
+.dialogCloseButton:focus {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  outline: none;
+}
+
 .dialogContentGrid {
   display: grid;
   gap: 16px;
@@ -145,7 +172,6 @@
   border: 1px solid var(--ifm-cybernetics-font-color);
   background: var(--ifm-cybernetics-background-color);
   overflow: hidden;
-  display: grid;
 }
 
 .cardImageWrapper {
@@ -163,7 +189,10 @@
 
 .cardBody {
   padding: 16px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -183,7 +212,7 @@
 .cardLink {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-lightest);
   text-decoration: none;
 }
 

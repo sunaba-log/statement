@@ -1,8 +1,8 @@
 {
-  "label": "メンバー紹介",
+  "label": "隊員紹介",
   "position": 4,
   "link": {
     "type": "doc",
-    "id": "members/intro"
+    "id": "members/index"
   }
 }

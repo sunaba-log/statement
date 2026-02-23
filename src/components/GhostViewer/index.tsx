@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./styles.module.css";
 import { renderMermaid, THEMES } from "beautiful-mermaid";
 import { useColorMode } from "@docusaurus/theme-common";
-import RenderMermaid from "react-x-mermaid";
+import RenderMermaid, { MermaidConfig } from "react-x-mermaid";
 export type GhostViewerProps = {
   heading?: string;
   mindset: string;
@@ -76,7 +76,9 @@ export default function GhostViewer({
           >
             <RenderMermaid
               mermaidCode={mindmap}
-              mermaidConfig={{ theme: "dark" }}
+              mermaidConfig={{
+                theme: "base",
+              }}
             />
           </div>
         </div>
@@ -98,7 +100,9 @@ export default function GhostViewer({
             <div className={styles.expandedModalContent}>
               <RenderMermaid
                 mermaidCode={mindmap}
-                mermaidConfig={{ theme: "dark" }}
+                mermaidConfig={{
+                  theme: "base",
+                }}
                 disableCopy={true}
                 disableDownload={true}
               />

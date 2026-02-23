@@ -31,10 +31,7 @@ function HomepageHeader() {
             >
               宣言を読む
             </Link>
-            <Link
-              className="button button--secondary button--lg"
-              to="/docs/statement/intro"
-            >
+            <Link className="button button--secondary button--lg" to="/blog">
               記録を読む
             </Link>
             <IconButton

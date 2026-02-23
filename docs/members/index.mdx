@@ -1,6 +1,6 @@
 ---
-title: メンバー紹介
-description: Sunabalogチームのメンバーをご紹介します。
+title: 隊員紹介
+description: Sunabalogチームの隊員をご紹介します。
 ---
 
 import MemberCard from "@site/src/components/MemberCard";
@@ -9,11 +9,10 @@ import { members, getAllDepartments } from "@site/src/data/members";
 import ShellViewer from "@site/src/components/ShellViewer";
 import GhostViewer from "@site/src/components/GhostViewer";
 
-# メンバー紹介
+# 隊員紹介
 
-Sunabalogチームの優秀なメンバーたちをご紹介します。私たちはユーザー第一のマインドセットで、最新の技術を活用しながら、高品質なプロダクトを創造しています。
+Sunabalog チームの優秀な隊員たちをご紹介します。
 
-## チーム構成
 
 <div style={{ marginBottom: '2rem' }}>
 
@@ -21,13 +20,13 @@ Sunabalogチームの優秀なメンバーたちをご紹介します。私た�
 const deptMembers = members.filter(m => m.department === department);
 return (
 <div key={department} style={{ marginBottom: '3rem' }}>
-<h3 style={{
+<h2 style={{
         borderBottom: '3px solid var(--ifm-color-primary)',
         paddingBottom: '0.5rem',
         marginBottom: '2rem'
       }}>
 {department}
-</h3>
+</h2>
 <div style={{
         // display: 'grid',
         // gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -52,12 +51,11 @@ return (
             website={member.website}
           /> 
           <ShellViewer
-        title={`${department}の活動`}
-        content={`このセクションでは、${department}のメンバーがどのようなプロジェクトに取り組んでいるかを紹介します。最新の技術スタックやプロジェクトの概要を通じて、チームの活躍をご覧ください。`}
+        content={member.shell}
       />
       <GhostViewer
-        title={`${department}の雰囲気`}
-        content={`${department}は、協力的で活発なチーム文化を持っています。定期的なミーティングやワークショップを通じて、メンバー同士が知識を共有し、成長しています。`}
+        mindmap={member.mindmap}
+        mindset={member.mindset}
       /></>
 ))}
 </div>
@@ -66,13 +64,6 @@ return (
 })}
 
 </div>
-
-## チームの特徴
-
-- 🎯 **品質重視** - コードレビューやテスト自動化を重視しています
-- 🚀 **最新技術** - 新しい技術の導入と学習に積極的です
-- 🤝 **チーム重視** - ドキュメント作成とナレッジ共有を大切にしています
-- 📚 **継続的成長** - 定期的な技術研修とスキルアップの機会を提供しています
 
 ## メンバー統計
 
@@ -92,13 +83,13 @@ return (
     <div style={{
       fontSize: '2rem',
       fontWeight: 'bold',
-      color: 'var(--ifm-color-primary)'
+      color: '#fff'
     }}>
       {members.length}
     </div>
     <div style={{
       fontSize: '0.9rem',
-      color: 'var(--ifm-color-gray-700)',
+      color: '#fff',
       marginTop: '0.5rem'
     }}>
       チームメンバー
@@ -110,81 +101,21 @@ return (
     background: 'var(--ifm-color-secondary-lightest)',
     borderRadius: '8px',
     textAlign: 'center'
-  }}>
+  }}> 
     <div style={{
       fontSize: '2rem',
       fontWeight: 'bold',
-      color: 'var(--ifm-color-secondary)'
+      color: 'var(--ifm-color-gray-900)'
     }}>
       {getAllDepartments().length}
     </div>
     <div style={{
       fontSize: '0.9rem',
-      color: 'var(--ifm-color-gray-700)',
+      color: 'var(--ifm-color-gray-900)',
       marginTop: '0.5rem'
     }}>
       部門数
     </div>
-  </div>
-
-  <div style={{
-    padding: '1.5rem',
-    background: 'var(--ifm-color-success-lightest)',
-    borderRadius: '8px',
-    textAlign: 'center'
-  }}>
-    <div style={{
-      fontSize: '2rem',
-      fontWeight: 'bold',
-      color: 'var(--ifm-color-success)'
-    }}>
-      {new Set(members.flatMap(m => m.skills)).size}
-    </div>
-    <div style={{
-      fontSize: '0.9rem',
-      color: 'var(--ifm-color-gray-700)',
-      marginTop: '0.5rem'
-    }}>
-      技術スタック
-    </div>
-  </div>
-</div>
-
-## 技術スタック
-
-<div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-  gap: '1.5rem',
-  marginTop: '2rem',
-  marginBottom: '2rem'
-}}>
-  <div style={{
-    padding: '1.5rem',
-    background: 'var(--ifm-color-gray-100)',
-    borderRadius: '8px'
-  }}>
-    <h4 style={{ marginTop: 0 }}>言語・フレームワーク</h4>
-    <ul style={{ margin: 0, paddingLeft: '1.5rem' }}>
-      <li>Go / Node.js (TypeScript)</li>
-      <li>Python / Java</li>
-      <li>React / Next.js</li>
-      <li>Vue.js</li>
-    </ul>
-  </div>
-
-  <div style={{
-    padding: '1.5rem',
-    background: 'var(--ifm-color-gray-100)',
-    borderRadius: '8px'
-  }}>
-    <h4 style={{ marginTop: 0 }}>インフラ・ツール</h4>
-    <ul style={{ margin: 0, paddingLeft: '1.5rem' }}>
-      <li>AWS (EC2, RDS, S3, Lambda)</li>
-      <li>Docker / Kubernetes</li>
-      <li>GitHub / GitHub Actions</li>
-      <li>PostgreSQL / MongoDB</li>
-    </ul>
   </div>
 </div>
 

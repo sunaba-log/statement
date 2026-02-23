@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-export type MemberSimpleCardProps = {
+export type MemberCardProps = {
   name: string;
   role: string;
   department: string;
@@ -12,11 +12,11 @@ export type MemberSimpleCardProps = {
   specialty?: string[];
   hobbies?: string[];
   github?: string;
-  sns?: string;
+  twitter?: string;
   website?: string;
 };
 
-export default function MemberSimpleCard({
+export default function MemberCard({
   name,
   role,
   department,
@@ -27,32 +27,33 @@ export default function MemberSimpleCard({
   specialty = [],
   hobbies = [],
   github,
-  sns,
+  twitter,
   website,
-}: MemberSimpleCardProps) {
+}: MemberCardProps) {
   const joinYear = new Date(joinDate).getFullYear();
   const joinMonth = new Date(joinDate).getMonth() + 1;
 
   return (
-    <div className={styles.memberSimpleCard}>
+    <div className={styles.memberCard}>
+      {image && (
+        <div className={styles.imageWrapper}>
+          <img src={image} alt={name} className={styles.memberImage} />
+        </div>
+      )}
+
       <div className={styles.content}>
         <div className={styles.header}>
-          {image && (
-            <div className={styles.avatarWrapper}>
-              {image ? (
-                <img src={image} alt={""} className={styles.avatar} />
-              ) : null}
-            </div>
-          )}
-          <div>
-            <h3 className={styles.name}>{name}</h3>
-            <p className={styles.role}>{role}</p>
-          </div>
+          <h3 className={styles.name}>{name}</h3>
+          <p className={styles.role}>{role}</p>
         </div>
 
         <div className={styles.meta}>
           <div className={styles.metaItem}>
-            <span className={styles.label}>入隊時期</span>
+            <span className={styles.label}>部門</span>
+            <span className={styles.value}>{department}</span>
+          </div>
+          <div className={styles.metaItem}>
+            <span className={styles.label}>参加時期</span>
             <span className={styles.value}>
               {joinYear}年{joinMonth}月
             </span>
@@ -61,14 +62,33 @@ export default function MemberSimpleCard({
 
         <p className={styles.bio}>{bio}</p>
 
-        <div className={styles.specialtySection}>
-          <h4 className={styles.sectionTitle}>専門領域</h4>
-          <span>{specialty.join(" / ")}</span>
-        </div>
+        {skills.length > 0 && (
+          <div className={styles.skillsSection}>
+            <h4 className={styles.sectionTitle}>スキル</h4>
+            <div className={styles.skillsList}>
+              {skills.map((skill, index) => (
+                <span key={index} className={styles.skillBadge}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {specialty.length > 0 && (
+          <div className={styles.specialtySection}>
+            <h4 className={styles.sectionTitle}>専門領域</h4>
+            <ul className={styles.specialtyList}>
+              {specialty.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {hobbies.length > 0 && (
           <div className={styles.hobbiesSection}>
-            <h4 className={styles.sectionTitle}>趣味・趣向</h4>
+            <h4 className={styles.sectionTitle}>趣味・特技</h4>
             <div className={styles.hobbiesList}>
               {hobbies.map((hobby, index) => (
                 <span key={index} className={styles.hobbyItem}>
@@ -79,7 +99,7 @@ export default function MemberSimpleCard({
           </div>
         )}
 
-        {(github || sns || website) && (
+        {(github || twitter || website) && (
           <div className={styles.links}>
             {github && (
               <a
@@ -89,18 +109,18 @@ export default function MemberSimpleCard({
                 className={styles.link}
                 title="GitHub"
               >
-                Github: {github}
+                GitHub
               </a>
             )}
-            {sns && (
+            {twitter && (
               <a
-                href={`https://sns.com/${sns}`}
+                href={`https://twitter.com/${twitter}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}
-                title="SNS"
+                title="Twitter"
               >
-                SNS: {sns}
+                Twitter
               </a>
             )}
             {website && (
@@ -111,7 +131,7 @@ export default function MemberSimpleCard({
                 className={styles.link}
                 title="Website"
               >
-                Site: {website.replace(/^https?:\/\//, "")}
+                ウェブサイト
               </a>
             )}
           </div>

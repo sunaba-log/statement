@@ -140,6 +140,7 @@ const config: Config = {
               label: "記録",
               to: "/blog",
             },
+            { label: "隊員", to: "/docs/members/index" },
             {
               label: "GitHub",
               href: "https://github.com/sunaba-log",
