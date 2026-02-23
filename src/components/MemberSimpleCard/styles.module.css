@@ -90,7 +90,7 @@
 }
 
 .value {
-  color: var(--ifm-color-gray-800);
+  color: var(--ifm-font-color-base);
 }
 
 .bio {
@@ -165,6 +165,7 @@
 }
 
 .link {
+  padding: 0px 12px;
   font-weight: 500;
   color: var(--ifm-color-primary);
   text-decoration: underline;

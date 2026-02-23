@@ -34,6 +34,12 @@ function HomepageHeader() {
             <Link className="button button--secondary button--lg" to="/blog">
               記録を読む
             </Link>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/members/"
+            >
+              隊員を見る
+            </Link>
             <IconButton
               icon={<GithubIcon width={20} height={20} />}
               label="GitHub"

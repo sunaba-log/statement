@@ -24,11 +24,11 @@ export type Member = {
 export const members: Member[] = [
   {
     id: "otaka44",
-    name: "otaka44",
+    name: "Takayoshi Ono",
     nameEn: "Takayoshi Ono",
     role: "デザインエンジニア",
     roleEn: "Design Engineer",
-    department: "Core Members",
+    department: "いつメン",
     joinDate: "2025-11-01",
     bio: "ITを手段として人々の心を動かす現象を精密に設計するデザインエンジニア。利便性の先にある「面白さ」を最上位の価値に置き、個人のポテンシャルを最大限に解放する「仕組み」を構築することを志向している。",
     image: "https://avatars.githubusercontent.com/u/44050587?v=4",
@@ -48,7 +48,7 @@ export const members: Member[] = [
       face: [
         {
           title: "Even G2",
-          image: "/statement/img/members/eveng2.avif",
+          image: "/statement/img/members/eveng2.jpg",
           description:
             "次世代のスマートグラス。スキルの拡張と外部記憶装置としての役割を果たし、日常のあらゆる瞬間の情報量を増幅した。",
           url: "https://www.evenrealities.com/smart-glasses",
@@ -57,14 +57,14 @@ export const members: Member[] = [
           title: "XREAL One",
           image: "/statement/img/members/ScenePic_productivity.jpg",
           description:
-            "任意の空有感情に作業平面を拡張できるARグラス。物理的なモニターの制約から解放され、どこでもマルチタスクが可能になった。",
+            "任意の空間上に作業平面を拡張できるARグラス。物理的なモニターの制約から解放され、どこでもマルチタスクが可能になった。",
           url: "https://www.xreal.com/jp",
         },
         {
           title: "OpenDots ONE",
           image: "/statement/img/members/opendot-black-1.jpeg",
           description:
-            "軽量かつコンパクトなイヤーカフ式イヤホン。16番染色体上のABCC11遺伝子に由来する湿性耳垢タイプの人に最適なデバイスで、自分だけのエンタメ体験の長期化を可能にした。",
+            "軽量かつコンパクトなイヤーカフ式イヤホン。16番染色体上のABCC11遺伝子に由来する湿性耳垢タイプの人に最適なデバイスで、エンタメ体験の没入可能時間を延長した。",
           url: "https://jp.shokz.com/",
         },
       ],
@@ -75,7 +75,7 @@ export const members: Member[] = [
           title: "cmf watch 3 pro",
           image: "/statement/img/members/cmfwatch3.jpg",
           description:
-            "2週間持続するバッテリーを有し、常時装着してもストレスのない軽量なスマートウォッチ。心拍数、血中酸素、睡眠、活動レベルなどのバイタルサインを24時間モニタリングを可能にした。",
+            "2週間持続するバッテリーを有し、常時装着してもストレスのない軽量なスマートウォッチ。心拍数、血中酸素、睡眠、活動レベルなどのバイタルサイン24時間モニタリングを可能にした。",
           url: "https://jp.nothing.tech/products/cmf-watch-3-pro",
         },
       ],
@@ -83,13 +83,28 @@ export const members: Member[] = [
       "hand-left": [
         {
           title: "Even R1",
-          image: "/statement/img/members/evenr1.jpg",
+          image: "/statement/img/members/iphone-17-black.jpg",
           description:
-            "気づかれることなく、Even G2を操作する。心拍数、心拍変動、血中酸素、体温、活動レベルなど、日中のバイタルサインも測定することができるスマートリング。",
+            "気づかれることなく、Even G2を操作できるスマートリング。スマートグラスの操作性が向上した。日中のバイタルサインも測定することができる。",
           url: "https://www.evenrealities.com/ja-US/smart-ring",
         },
       ],
-      "hand-right": [],
+      "hand-right": [
+        {
+          title: "iPhone 17",
+          image: "/statement/img/members/iphone-17-black.jpg",
+          description:
+            "Apple社製第19世代モデルのスマートフォン。A17 Proチップを搭載し、あらゆる操作がより快適になった。各拡張パーツのメインハブとして機能する。",
+          url: "https://www.apple.com/jp/iphone-17/",
+        },
+        {
+          title: "beak mag 2",
+          image: "/statement/img/members/beakmag2-thum_14.jpg",
+          description:
+            "Magsafe/Pixelsnapより着脱可能な36g超軽量スマホスタンド兼スマホグリップ。スマホスタンドとしての機能に加え、スマホを片手で持つ際の安定性が向上したことで、スマホをケースから解放し、スマホに本来の美しさを取り戻した。",
+          url: "https://doublebar.jp/products/beakmag2",
+        },
+      ],
       "thigh-left": [],
       "thigh-right": [],
       "foot-left": [
