@@ -1,0 +1,150 @@
+---
+title: 隊員紹介
+description: Sunabalogチームの隊員をご紹介します。
+---
+
+import MemberCard from "@site/src/components/MemberCard";
+import MemberSimpleCard from "@site/src/components/MemberSimpleCard";
+import { members, getAllDepartments } from "@site/src/data/members";
+import ShellViewer from "@site/src/components/ShellViewer";
+import GhostViewer from "@site/src/components/GhostViewer";
+
+# 隊員紹介
+
+Sunabalog チームの優秀な隊員たちをご紹介します。
+
+
+<div style={{ marginBottom: '2rem' }}>
+
+{getAllDepartments().map((department) => {
+const deptMembers = members.filter(m => m.department === department);
+return (
+<div key={department} style={{ marginBottom: '3rem' }}>
+<h2 style={{
+        borderBottom: '3px solid var(--ifm-color-primary)',
+        paddingBottom: '0.5rem',
+        marginBottom: '2rem'
+      }}>
+{department}
+</h2>
+<div style={{
+        // display: 'grid',
+        // gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        // gap: '2rem'
+      }}>
+     
+{deptMembers.map((member) => (
+  <>
+<MemberSimpleCard
+            key={member.id}
+            name={member.name}
+            role={member.role}
+            department={member.department}
+            joinDate={member.joinDate}
+            bio={member.bio}
+            image={member.image}
+            skills={member.skills}
+            specialty={member.specialty}
+            hobbies={member.hobbies}
+            github={member.github}
+            twitter={member.twitter}
+            website={member.website}
+          /> 
+          <ShellViewer
+        content={member.shell}
+      />
+      <GhostViewer
+        mindmap={member.mindmap}
+        mindset={member.mindset}
+      /></>
+))}
+</div>
+</div>
+);
+})}
+
+</div>
+
+## メンバー統計
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+  gap: '1.5rem',
+  marginTop: '2rem',
+  marginBottom: '2rem'
+}}>
+  <div style={{
+    padding: '1.5rem',
+    background: 'var(--ifm-color-primary-lightest)',
+    borderRadius: '8px',
+    textAlign: 'center'
+  }}>
+    <div style={{
+      fontSize: '2rem',
+      fontWeight: 'bold',
+      color: '#fff'
+    }}>
+      {members.length}
+    </div>
+    <div style={{
+      fontSize: '0.9rem',
+      color: '#fff',
+      marginTop: '0.5rem'
+    }}>
+      チームメンバー
+    </div>
+  </div>
+  
+  <div style={{
+    padding: '1.5rem',
+    background: 'var(--ifm-color-secondary-lightest)',
+    borderRadius: '8px',
+    textAlign: 'center'
+  }}> 
+    <div style={{
+      fontSize: '2rem',
+      fontWeight: 'bold',
+      color: 'var(--ifm-color-gray-900)'
+    }}>
+      {getAllDepartments().length}
+    </div>
+    <div style={{
+      fontSize: '0.9rem',
+      color: 'var(--ifm-color-gray-900)',
+      marginTop: '0.5rem'
+    }}>
+      部門数
+    </div>
+  </div>
+</div>
+
+## メンバーを追加する方法
+
+新しいメンバーを追加するには、以下のファイルを編集してください：
+
+1. **`src/data/members.ts`** - メンバー情報を `members` 配列に追加
+2. **メンバー画像** - `static/img/members/` フォルダに画像を配置
+3. **自動反映** - このページが自動的に更新されます
+
+### 追加例
+
+```typescript
+{
+  id: "new-member",
+  name: "新規 メンバー",
+  nameEn: "New Member",
+  role: "エンジニア",
+  roleEn: "Engineer",
+  department: "バックエンド チーム",
+  joinDate: "2026-03-01",
+  bio: "プロフィール説明...",
+  image: "/img/members/new-member.jpg",
+  skills: ["Skill1", "Skill2"],
+  specialty: ["特技1", "特技2"],
+  hobbies: ["趣味1", "趣味2"],
+  github: "username",
+  twitter: "username",
+  website: "https://example.com",
+}
+```
