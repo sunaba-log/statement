@@ -34,7 +34,12 @@ return (
       }}>
      
 {deptMembers.map((member) => (
-  <>
+  <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+      }}>
+      <div>
 <MemberSimpleCard
             key={member.id}
             name={member.name}
@@ -50,13 +55,16 @@ return (
             twitter={member.twitter}
             website={member.website}
           /> 
-          <ShellViewer
+          </div>
+          <div><ShellViewer
         content={member.shell}
-      />
+      /></div>
+      <div style={{ gridColumnStart: 1, gridColumnEnd: 3 }}>
       <GhostViewer
         mindmap={member.mindmap}
         mindset={member.mindset}
-      /></>
+      /></div>
+      </div>
 ))}
 </div>
 </div>
@@ -76,20 +84,20 @@ return (
 }}>
   <div style={{
     padding: '1.5rem',
-    background: 'var(--ifm-color-primary-lightest)',
+    borderColor: 'var(--ifm-color-primary)',
+    borderWidth: '2px',
+    borderStyle: 'solid',
     borderRadius: '8px',
     textAlign: 'center'
   }}>
     <div style={{
       fontSize: '2rem',
       fontWeight: 'bold',
-      color: '#fff'
     }}>
       {members.length}
     </div>
     <div style={{
       fontSize: '0.9rem',
-      color: '#fff',
       marginTop: '0.5rem'
     }}>
       チームメンバー
@@ -98,20 +106,20 @@ return (
   
   <div style={{
     padding: '1.5rem',
-    background: 'var(--ifm-color-secondary-lightest)',
+    borderColor: 'var(--ifm-color-primary)',
+    borderWidth: '2px',
+    borderStyle: 'solid',
     borderRadius: '8px',
     textAlign: 'center'
   }}> 
     <div style={{
       fontSize: '2rem',
       fontWeight: 'bold',
-      color: 'var(--ifm-color-gray-900)'
     }}>
       {getAllDepartments().length}
     </div>
     <div style={{
       fontSize: '0.9rem',
-      color: 'var(--ifm-color-gray-900)',
       marginTop: '0.5rem'
     }}>
       部門数

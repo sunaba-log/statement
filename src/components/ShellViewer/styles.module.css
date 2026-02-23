@@ -29,7 +29,7 @@
   padding: 16px;
   display: grid;
   gap: 12px;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .svg {
@@ -39,12 +39,9 @@
 }
 
 .legend {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
   gap: 8px;
-  justify-content: flex-start;
-  max-height: 400px;
 }
 
 .legendButton,
@@ -54,6 +51,7 @@
   font-size: 0.85rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-cybernetics-background-color);
+  min-width: 40px;
   color: white;
   transition:
     border-color 0.2s ease,
