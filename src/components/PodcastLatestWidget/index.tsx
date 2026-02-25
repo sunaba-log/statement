@@ -45,7 +45,11 @@ function getImageUrlFromElement(
     return undefined;
   }
 
-  const itunesImage = element.querySelector("itunes\\:image");
+  const itunesNamespace = "http://www.itunes.com/dtds/podcast-1.0.dtd";
+  const itunesImage =
+    element.querySelector("itunes\\:image") ??
+    element.getElementsByTagName("itunes:image").item(0) ??
+    element.getElementsByTagNameNS(itunesNamespace, "image").item(0);
   const itunesHref = itunesImage?.getAttribute("href")?.trim();
   if (itunesHref) {
     return itunesHref;
