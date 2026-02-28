@@ -14,7 +14,7 @@
 
 .sectionTitle {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--ifm-font-color-base);
 }
 
@@ -84,7 +84,7 @@
 
 .heading {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--ifm-font-color-base);
 }
 
@@ -235,7 +235,7 @@
 
 .cardTitle {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--ifm-cybernetics-font-color);
 }
 
@@ -297,7 +297,7 @@
   background: var(--ifm-color-emphasis-200);
   color: var(--ifm-font-color-base);
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;

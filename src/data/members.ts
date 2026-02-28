@@ -83,7 +83,7 @@ export const members: Member[] = [
       "hand-left": [
         {
           title: "Even R1",
-          image: "/statement/img/members/iphone-17-black.jpg",
+          image: "/statement/img/members/evenr1.jpg",
           description:
             "気づかれることなく、Even G2を操作できるスマートリング。スマートグラスの操作性が向上した。日中のバイタルサインも測定することができる。",
           url: "https://www.evenrealities.com/ja-US/smart-ring",
@@ -153,6 +153,38 @@ mindmap
         人の可能性を最大化する環境
       枯れない好奇心
         10年後もあーだこーだ言える関係`,
+  },
+  {
+    id: "takashima",
+    name: "Ken Takashima",
+    nameEn: "Ken Takashima",
+    role: "undefined",
+    roleEn: "",
+    department: "いつメン",
+    joinDate: "2025-11-01",
+    bio: "undefined",
+    image: "https://avatars.githubusercontent.com/u/69785924?v=4",
+    skills: [],
+    specialty: [],
+    hobbies: [],
+    mindset: "",
+    mindmap: "",
+  },
+  {
+    id: "kazumori",
+    name: "Kohei Kazumori",
+    nameEn: "Kohei Kazumori",
+    role: "undefined",
+    roleEn: "",
+    department: "いつメン",
+    joinDate: "2025-11-01",
+    bio: "undefined",
+    image: "https://avatars.githubusercontent.com/u/64582298?v=4",
+    skills: [],
+    specialty: [],
+    hobbies: [],
+    mindset: "",
+    mindmap: "",
   },
 ];
 
