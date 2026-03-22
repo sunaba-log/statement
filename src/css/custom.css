@@ -77,3 +77,37 @@ h5 {
 .mermaid-renderer {
   background-color: var(--ifm-background-color) !important;
 }
+
+/* Footnotes */
+.footnotes {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 0.5px dashed var(--ifm-color-primary);
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.footnotes h2 {
+  font-size: 1rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.footnotes ol {
+  padding-left: 1.5rem;
+}
+
+.footnotes li {
+  margin-bottom: 0.25rem;
+}
+
+.footnote-ref a,
+.footnotes a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.footnote-ref a:hover,
+.footnotes a:hover {
+  text-decoration: underline;
+}
