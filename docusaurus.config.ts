@@ -12,6 +12,11 @@ import type * as Preset from "@docusaurus/preset-classic";
 const mermaidConfig = {
   markdown: {
     mermaid: true,
+    remarkRehypeOptions: {
+      footnoteLabel: "脚注",
+      footnoteBackLabel: (referenceIndex: number, rereferenceIndex: number) =>
+        `本文に戻る ${referenceIndex + 1}${rereferenceIndex > 1 ? `-${rereferenceIndex}` : ""}`,
+    },
   },
   themes: ["@docusaurus/theme-mermaid"],
 };
