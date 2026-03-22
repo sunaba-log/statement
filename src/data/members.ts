@@ -68,7 +68,15 @@ export const members: Member[] = [
           url: "https://jp.shokz.com/",
         },
       ],
-      chest: [],
+      chest: [
+        {
+          title: "FUJIFILM X-E5",
+          image: "/statement/img/members/fujifilm_xe5.jpg",
+          description:
+            "質量445gの軽量コンパクトなボディに、裏面照射型約4020万画素センサーと高速画像処理エンジンを搭載したミラーレスデジタルカメラ。日常を切り取る相棒として、常に身近に携帯している。",
+          url: "https://www.fujifilm-x.com/ja-jp/products/cameras/x-e5/",
+        },
+      ],
       hip: [],
       "arm-left": [
         {
@@ -109,20 +117,20 @@ export const members: Member[] = [
       "thigh-right": [],
       "foot-left": [
         {
-          title: "Cloudmonster 2",
-          image: "/statement/img/members/cloudmonster2.jpg",
+          title: "Cloud 6 Geo Waterproof",
+          image: "/statement/img/members/Cloud 6 Geo Waterproof.jpg",
           description:
-            "CloudTec®ミッドソールを採用したハイテクスニーカー。圧倒的なエネルギーリターンと前方へのローリングが生み出す怒濤の推進力が長距離走行を快適にした。",
-          url: "https://www.on.com/ja-jp/products/cloudmonster-2-m-3me1012/mens/",
+            "CloudTec®ミッドソールを採用したハイテクスニーカー。水の侵入をシャットアウトする防水アッパー、靴紐を結ぶ必要がないトグル式シューレースシステムを搭載。雨天時も快適な履き心地を提供する。",
+          url: "https://www.on.com/ja-jp/products/cloud-6-geo-wp-m-3mg1042/mens/black-black-shoes-3MG10421043",
         },
       ],
       "foot-right": [
         {
-          title: "Cloudmonster 2",
-          image: "/statement/img/members/cloudmonster2.jpg",
+          title: "Cloud 6 Geo Waterproof",
+          image: "/statement/img/members/Cloud 6 Geo Waterproof.jpg",
           description:
-            "CloudTec®ミッドソールを採用したハイテクスニーカー。圧倒的なエネルギーリターンと前方へのローリングが生み出す怒濤の推進力が長距離走行を快適にした。",
-          url: "https://www.on.com/ja-jp/products/cloudmonster-2-m-3me1012/mens/",
+            "CloudTec®ミッドソールを採用したハイテクスニーカー。水の侵入をシャットアウトする防水アッパー、靴紐を結ぶ必要がないトグル式シューレースシステムを搭載。雨天時も快適な履き心地を提供する。",
+          url: "https://www.on.com/ja-jp/products/cloud-6-geo-wp-m-3mg1042/mens/black-black-shoes-3MG10421043",
         },
       ],
     },
